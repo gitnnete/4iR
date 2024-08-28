@@ -14,13 +14,17 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const isActive = (path) => {
+    return location.pathname === path ? "active-link" : "";
+  };
+
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-        <div class="container">
-          <li class="nav-item mx-4 fw-bold">
+      <nav className="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div className="container">
+          <li className="nav-item mx-4 fw-bold">
             <Link
-              class="navbar-brand text-white fs-3"
+              className="navbar-brand text-white fs-3"
               aria-current="page"
               to="/"
               onClick={() => setIsOpen(false)}
@@ -29,41 +33,40 @@ const Navbar = () => {
             </Link>
           </li>
           <button
-            class="navbar-toggler text-secondary"
+            className="navbar-toggler text-secondary"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
             onClick={toggleNavbar}
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div
             className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}
             id="navbarNav"
           >
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item mx-4 fw-bold">
+            <ul className="navbar-nav ms-auto">
+              <li className={`nav-item mx-4 fw-bold ${isActive("/")}`}>
                 <Link
-                  class="nav-link active"
+                  className="nav-link active"
                   aria-current="page"
                   to="/"
-                  
                 >
                   Home
                 </Link>
               </li>
-              <li class="nav-item mx-4 fw-bold">
-                <Link class="nav-link" to="/Services" >
+              <li className={`nav-item mx-4 fw-bold ${isActive("/Services")}`}>
+                <Link className="nav-link" to="/Services">
                   Services
                 </Link>
               </li>
-              <li class="nav-item mx-4 fw-bold">
-                <Link class="nav-link" to="/About" >
+              <li className={`nav-item mx-4 fw-bold ${isActive("/About")}`}>
+                <Link className="nav-link" to="/About">
                   About
                 </Link>
               </li>
-              <li class="nav-item mx-4 fw-bold">
-                <Link class="nav-link" to="/ContactUs" >
+              <li className={`nav-item mx-4 fw-bold ${isActive("/ContactUs")}`}>
+                <Link className="nav-link" to="/ContactUs">
                   Contact
                 </Link>
               </li>

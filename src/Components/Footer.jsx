@@ -28,43 +28,39 @@ const Footer = () => {
             {/* Social Media Icons - Vertical List */}
             <div className="col-md-4 text-center">
               <h5>Follow Us</h5>
-              <ul className="list-unstyled">
-                <li className="my-3 footer-icons">
+              <ul className="list-unstyled footer-icons">
+                <li className="my-3">
                   <a
                     href="https://www.instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-secondary"
                   >
                     <i className="fab fa-instagram fa-2x"></i>
                   </a>
                 </li>
-                <li className="my-3 footer-icons">
+                <li className="my-3">
                   <a
                     href="https://www.facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-secondary"
                   >
                     <i className="fab fa-facebook-f fa-2x"></i>
                   </a>
                 </li>
-                <li className="my-3 footer-icons">
+                <li className="my-3">
                   <a
                     href="https://www.linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-secondary"
                   >
                     <i className="fab fa-linkedin-in fa-2x"></i>
                   </a>
                 </li>
-                <li className="my-3 footer-icons">
+                <li className="my-3">
                   <a
                     href="https://www.twitter.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-secondary"
                   >
                     <i className="fab fa-twitter fa-2x"></i>
                   </a>

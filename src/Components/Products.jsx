@@ -53,12 +53,12 @@ const Products = () => {
   return (
     <>
       <div className="text-center pt-5 pb-3">
-        <h1 className=" fs-3">Our Products</h1>
+        <h1 className="fs-3">Our Products</h1>
       </div>
 
-      <div className="text-center pb-3">
+      <div className="text-center pb-3 product-container">
         {/* For large screens */}
-        <div className="row d-none d-md-flex">
+        <div className="row d-none d-md-flex position-relative">
           {products.map((product, index) => (
             <div className="col-md-4 mb-4" key={index}>
               <div className="p-4 border rounded">
@@ -70,6 +70,12 @@ const Products = () => {
               </div>
             </div>
           ))}
+          <div className="position-absolute top-50 start-0 translate-middle-y">
+            <i className="fas fa-chevron-left fa-2x text-secondary"></i>
+          </div>
+          <div className="position-absolute top-50 end-0 translate-middle-y">
+            <i className="fas fa-chevron-right fa-2x text-secondary"></i>
+          </div>
         </div>
 
         {/* For small screens */}
@@ -99,7 +105,7 @@ const Products = () => {
             data-bs-slide="prev"
           >
             <span
-              className="carousel-control-prev-icon"
+              className="carousel-control-prev-icon bg-secondary rounded-circle"
               aria-hidden="true"
             ></span>
             <span className="sr-only">Previous</span>
@@ -111,7 +117,7 @@ const Products = () => {
             data-bs-slide="next"
           >
             <span
-              className="carousel-control-next-icon "
+              className="carousel-control-next-icon bg-secondary rounded-circle"
               aria-hidden="true"
             ></span>
             <span className="sr-only">Next</span>
@@ -125,4 +131,5 @@ const Products = () => {
     </>
   );
 };
+
 export default Products;
