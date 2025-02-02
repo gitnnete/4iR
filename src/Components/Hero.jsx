@@ -17,9 +17,8 @@ const Hero = () => {
             <div className="hero-item text-start">
               <h1>Comprehensive cloud solutions</h1>
               <p className="additional-text pb-3 text-start ms-1">
-                Unlock agility and scalability by leveraging key partnerships
-                with AWS, Microsoft, Alibaba Cloud and Dotcom Software
-                Solutions.
+                Achieve greater agility and scalability by building strategic
+                partnerships with leading cloud and software solution providers.
               </p>
               <button className="hero-button">Learn More</button>
             </div>
